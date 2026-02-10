@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>KOCHI Nature Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+  <style>
+    body { margin:0; }
+    #map { height:100vh; }
+    .menu {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      background: #fff;
+    }
+    .menu button {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div class="menu">
+  <button onclick="filterCategory('river')">🌊</button>
+  <button onclick="filterCategory('forest')">🌲</button>
+  <button onclick="filterCategory('waterfall')">💧</button>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
